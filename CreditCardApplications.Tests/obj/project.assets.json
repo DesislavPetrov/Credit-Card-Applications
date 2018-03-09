@@ -5972,11 +5972,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications.Tests\\CreditCardApplications.Tests.csproj",
+      "projectUniqueName": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications.Tests\\CreditCardApplications.Tests.csproj",
       "projectName": "CreditCardApplications.Tests",
-      "projectPath": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications.Tests\\CreditCardApplications.Tests.csproj",
+      "projectPath": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications.Tests\\CreditCardApplications.Tests.csproj",
       "packagesPath": "C:\\Users\\WinPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications.Tests\\obj\\",
+      "outputPath": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5995,8 +5995,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications\\CreditCardApplications.csproj": {
-              "projectPath": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications\\CreditCardApplications.csproj"
+            "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications\\CreditCardApplications.csproj": {
+              "projectPath": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications\\CreditCardApplications.csproj"
             }
           }
         }

@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications\\CreditCardApplications.csproj",
+      "projectUniqueName": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications\\CreditCardApplications.csproj",
       "projectName": "CreditCardApplications",
-      "projectPath": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications\\CreditCardApplications.csproj",
+      "projectPath": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications\\CreditCardApplications.csproj",
       "packagesPath": "C:\\Users\\WinPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\WinPC\\source\\repos\\CreditCardApplications\\CreditCardApplications\\obj\\",
+      "outputPath": "E:\\GitHub\\Credit-Card-Applications\\CreditCardApplications\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

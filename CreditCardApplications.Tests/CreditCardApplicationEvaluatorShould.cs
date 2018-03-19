@@ -173,7 +173,68 @@ namespace CreditCardApplications.Tests
 
             sut.Evaluate(application);
 
-            mockValidator.Verify(x => x.IsValid(It.IsAny<string>()));
+            mockValidator.Verify(x => x.IsValid(It.IsAny<string>()), Times.Once);
+        }
+
+        //[Fact]
+        //public void ValidateFrequentFlyerNumberForLowIncomeApplications_CustomMessage()
+        //{
+        //    var mockValidator = new Mock<IFrequentFlyerNumberValidator>();
+        //    mockValidator.Setup(x => x.ServiceInformation.License.LicenseKey).Returns("OK");
+
+        //    var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
+
+        //    var application = new CreditCardApplication();
+
+        //    sut.Evaluate(application);
+
+        //    mockValidator.Verify(x => x.IsValid(It.IsNotNull<string>()), , "Frequent flyer number passed should not be null");
+        //}
+
+        [Fact]
+        public void NotValidateFrequentFlyerNumberForHighIncomeApplications()
+        {
+            var mockValidator = new Mock<IFrequentFlyerNumberValidator>();
+            mockValidator.Setup(x => x.ServiceInformation.License.LicenseKey).Returns("OK");
+
+            var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
+
+            var application = new CreditCardApplication { GrossAnnualIncome = 100_000 };
+
+            sut.Evaluate(application);
+
+            mockValidator.Verify(x => x.IsValid(It.IsAny<string>()), Times.Never);
+        }
+
+        [Fact]
+        public void CheckLicenseKeyForLowIncomeApplications()
+        {
+            var mockValidator = new Mock<IFrequentFlyerNumberValidator>();
+            mockValidator.Setup(x => x.ServiceInformation.License.LicenseKey).Returns("OK");
+
+            var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
+
+            var application = new CreditCardApplication { GrossAnnualIncome = 99_000 };
+
+            sut.Evaluate(application);
+
+            mockValidator.VerifyGet(x => x.ServiceInformation.License.LicenseKey, Times.Once);
+        }
+
+        [Fact]
+        public void SetDetailedLookupForOlderApplications()
+        {
+            var mockValidator = new Mock<IFrequentFlyerNumberValidator>();
+
+            mockValidator.Setup(x => x.ServiceInformation.License.LicenseKey).Returns("OK");
+
+            var sut = new CreditCardApplicationEvaluator(mockValidator.Object);
+
+            var application = new CreditCardApplication { Age = 29 };
+
+            sut.Evaluate(application);
+
+            mockValidator.VerifySet(x => x.ValidationMode = It.IsAny<ValidationMode>(), Times.Once);
         }
     }
 }
